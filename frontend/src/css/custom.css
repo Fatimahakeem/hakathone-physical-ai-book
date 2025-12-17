@@ -5,30 +5,30 @@
 
 :root {
   /* Core Colors */
-  --site-primary-color: #A855F7; /* Neon Purple */
-  --site-secondary-color: #3B82F6; /* Neon Blue */
-  --site-bg-color: #0A0F1F; /* Deep Space Dark */
-  --site-glass-bg: rgba(20, 25, 45, 0.7);
-  --site-glass-border: rgba(168, 85, 247, 0.3);
-  --site-text-color: #E2E8F0; /* Cool Gray */
+  --site-primary-color: #00E5FF; /* Neon Cyan */
+  --site-secondary-color: #2979FF; /* Electric Blue */
+  --site-bg-color: #050A14; /* Darker Deep Space */
+  --site-glass-bg: rgba(5, 15, 30, 0.7);
+  --site-glass-border: rgba(0, 229, 255, 0.3);
+  --site-text-color: #E0F7FA; /* Cyan-tinted White */
   --site-heading-color: #FFFFFF;
   
   /* Docusaurus Infima Overrides (Forcing Dark Theme Look) */
   --ifm-color-primary: var(--site-primary-color);
-  --ifm-color-primary-dark: #9333ea;
-  --ifm-color-primary-darker: #7e22ce;
-  --ifm-color-primary-darkest: #6b21a8;
-  --ifm-color-primary-light: #c084fc;
-  --ifm-color-primary-lighter: #d8b4fe;
-  --ifm-color-primary-lightest: #f3e8ff;
+  --ifm-color-primary-dark: #00b8cc;
+  --ifm-color-primary-darker: #00add9;
+  --ifm-color-primary-darkest: #008eb3;
+  --ifm-color-primary-light: #33efff;
+  --ifm-color-primary-lighter: #66f5ff;
+  --ifm-color-primary-lightest: #ccfbff;
 
   --ifm-background-color: var(--site-bg-color);
   --ifm-font-color-base: var(--site-text-color);
   --ifm-heading-color: var(--site-heading-color);
   
   /* Navbar */
-  --ifm-navbar-background-color: rgba(10, 15, 31, 0.6); /* Transparent */
-  --ifm-navbar-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --ifm-navbar-background-color: rgba(5, 10, 20, 0.6); /* Transparent */
+  --ifm-navbar-shadow: 0 4px 30px rgba(0, 229, 255, 0.1);
   --ifm-navbar-link-hover-color: var(--site-primary-color);
   
   /* Sidebar */
@@ -40,12 +40,12 @@
 [data-theme='light'] {
   --ifm-background-color: var(--site-bg-color);
   --ifm-font-color-base: var(--site-text-color);
-  --ifm-navbar-background-color: rgba(10, 15, 31, 0.6);
+  --ifm-navbar-background-color: rgba(5, 10, 20, 0.6);
 }
 
 body {
   background-color: var(--site-bg-color);
-  background-image: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0A0F1F 60%);
+  background-image: radial-gradient(circle at 50% 0%, #0c4a6e 0%, #050A14 60%);
   background-attachment: fixed;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -126,6 +126,11 @@ body {
   border: 1px solid var(--site-primary-color);
   border-radius: 16px;
   overflow: hidden;
+  /* Default Desktop Dimensions */
+  width: 380px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-header {
@@ -179,3 +184,105 @@ body {
   background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
   z-index: -1;
 }
+
+.hero-title-responsive {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 996px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+    height: auto;
+    min-height: auto;
+  }
+
+  .hero-content-left {
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-visual-right {
+    margin-bottom: 4rem;
+  }
+
+  .robot-hologram-placeholder {
+    width: 250px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-widget-container {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+
+  .chat-window {
+    width: calc(100vw - 40px) !important;
+    height: 60vh !important;
+    position: fixed;
+    bottom: 90px; /* Above the toggle button */
+    right: 20px;
+  }
+
+  .hero-title-responsive {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Mobile Sidebar Customization */
+.navbar-sidebar {
+  background-color: var(--site-bg-color);
+  border-right: 1px solid var(--site-primary-color);
+}
+
+.navbar-sidebar__item {
+  padding: 0.5rem;
+}
+
+.menu__link {
+  color: var(--site-text-color);
+}
+
+.menu__link--active {
+  color: var(--site-primary-color);
+  background: rgba(168, 85, 247, 0.1);
+}
+
+/* Force Mobile Sidebar Visibility */
+@media (max-width: 996px) {
+  .navbar__toggle {
+    display: block !important;
+    z-index: 10001;
+  }
+  
+  .navbar-sidebar {
+    z-index: 10000 !important;
+    display: block !important; /* Docusaurus toggles this, but ensuring base state */
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh !important;
+    width: 80vw; /* Most of screen but leave a gap */
+    max-width: 400px;
+    transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+  }
+
+  /* When sidebar is closed (handled by Docusaurus JS, but we need to ensure open state works) */
+  /* Docusaurus adds a class to body or the sidebar itself usually. 
+     We might need to be careful not to force it ALWAYS open if Docusaurus JS is toggling a class. 
+     The user complaint is about scroll. */
+  
+  .navbar-sidebar__items {
+    display: block !important;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 60px; /* Space for top bar/logo */
+  }
+}
+

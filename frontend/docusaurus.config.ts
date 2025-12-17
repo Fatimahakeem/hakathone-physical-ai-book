@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://Fatimahakeem.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/hakathone-physical-ai-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Fatimahakeem', // Usually your GitHub org/user name.
+  projectName: 'hakathone-physical-ai-book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/rabiya972/Hakathone-Physical-humanoid-Robotics-book-/tree/main/frontend/',
+            'https://github.com/Fatimahakeem/hakathone-physical-ai-book/tree/main/frontend/',
         },
         blog: false, // Disable the blog plugin
         theme: {
@@ -68,13 +68,12 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/docs/intro',
           position: 'left',
           label: 'Modules',
         },
         {
-          href: 'https://github.com/rabiya972/Hakathone-Physical-humanoid-Robotics-book-',
+          href: 'https://github.com/Fatimahakeem/hakathone-physical-ai-book',
           label: 'GitHub',
           position: 'right',
         },
@@ -114,7 +113,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/rabiya972/Hakathone-Physical-humanoid-Robotics-book-',
+              href: 'https://github.com/Fatimahakeem/hakathone-physical-ai-book',
             },
           ],
         },

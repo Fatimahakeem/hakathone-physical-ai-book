@@ -71,12 +71,12 @@ export default function ChatWidget() {
             )}
 
             {isOpen && (
-                <div className="chat-window glass-panel flex flex-col" style={{ width: '380px', height: '600px', display: 'flex', flexDirection: 'column' }}>
+                <div className="chat-window glass-panel flex flex-col">
                     {/* Header */}
                     <div className="chat-header p-3 flex justify-between items-center" style={{ padding: '1rem', borderBottom: '1px solid rgba(168,85,247,0.3)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                              <div style={{ width: '8px', height: '8px', background: '#3B82F6', borderRadius: '50%', boxShadow: '0 0 5px #3B82F6' }}></div>
-                             <span style={{ fontWeight: 'bold', color: '#fff' }}>AI Tutor <span style={{fontSize: '0.8em', opacity: 0.7}}>({difficulty})</span></span>
+                             <span style={{ fontWeight: 'bold', color: '#fff' }}>AI Tutor</span>
                         </div>
                         <button onClick={() => setIsOpen(false)} style={{ background: 'none', border: 'none', color: '#A855F7', cursor: 'pointer', fontSize: '1.2rem' }}>✕</button>
                     </div>

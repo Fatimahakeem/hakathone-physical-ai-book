@@ -21,12 +21,12 @@ function HomepageHero() {
         <div className="row">
           {/* Left Column: Typography */}
           <div className="col col--6 hero-content-left">
-            <div className="badge badge--secondary margin-bottom--md" style={{background: 'rgba(168,85,247,0.2)', color: '#A855F7', border: '1px solid #A855F7'}}>
+            <div className="badge badge--secondary margin-bottom--md" style={{background: 'rgba(0, 229, 255, 0.2)', color: '#00E5FF', border: '1px solid #00E5FF'}}>
               AI-NATIVE TEXTBOOK
             </div>
-            <h1 className="hero__title" style={{fontSize: '3.5rem', lineHeight: '1.2'}}>
+            <h1 className="hero__title hero-title-responsive">
               Physical AI & <br />
-              <span className="neon-text" style={{color: '#A855F7'}}>Humanoid Robotics</span>
+              <span className="neon-text" style={{color: '#00E5FF'}}>Humanoid Robotics</span>
             </h1>
             <p className="hero__subtitle margin-vert--md" style={{fontSize: '1.2rem', color: '#94a3b8'}}>
               Master the future of embodiment. From Sim2Real to VLA Models, 
@@ -37,14 +37,14 @@ function HomepageHero() {
                 className="button button--lg"
                 to="/docs/intro"
                 style={{
-                  background: 'linear-gradient(135deg, #A855F7 0%, #3B82F6 100%)',
-                  color: 'white',
+                  background: 'linear-gradient(135deg, #00E5FF 0%, #2979FF 100%)',
+                  color: 'black',
                   border: 'none',
                   borderRadius: '30px',
                   padding: '1rem 2.5rem',
                   fontSize: '1.2rem',
                   fontWeight: 'bold',
-                  boxShadow: '0 0 20px rgba(168, 85, 247, 0.5)'
+                  boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)'
                 }}>
                 Start Reading
               </Link>
@@ -93,10 +93,10 @@ export default function Home() {
               {title: 'Simulation Environments', desc: 'Isaac Sim, Gazebo, and Physics Engines', link: '/docs/module-3'},
               {title: 'VLA Models', desc: 'Vision-Language-Action pipelines', link: '/docs/module-4'},
             ].map((module, idx) => (
-              <div className="col col--3 margin-bottom--lg" key={idx}>
+              <div className="col col--12 col--md--6 col--lg--3 margin-bottom--lg" key={idx}>
                 <Link to={module.link} style={{textDecoration: 'none'}}>
                   <div className="glass-panel padding--md" style={{height: '100%', transition: 'transform 0.2s'}}>
-                    <h3 style={{color: '#A855F7'}}>{module.title}</h3>
+                    <h3 style={{color: '#00E5FF'}}>{module.title}</h3>
                     <p style={{color: '#cbd5e1'}}>{module.desc}</p>
                   </div>
                 </Link>

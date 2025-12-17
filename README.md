@@ -48,7 +48,7 @@ An interactive, AI-native textbook platform designed to teach Physical AI and Hu
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/rabiya972/Hakathone-Physical-humanoid-Robotics-book-.git
+    git clone https://github.com/Fatimahakeem/hakathone-physical-ai-book.git
     cd "Hakathone-Physical-humanoid-Robotics-book-"
     ```
 

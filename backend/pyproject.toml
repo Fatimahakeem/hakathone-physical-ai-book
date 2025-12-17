@@ -2,7 +2,7 @@
 name = "backend"
 version = "0.1.0"
 description = "FastAPI Backend for AI Textbook"
-authors = ["Rabiya <rabiyarashid53@gmail.com>"]
+authors = ["Fatimahakeem <fatimahakeem1992@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
