@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Hakathone Physical AI Book',
+  title: 'Physical AI & Humanoid Robotics',
   tagline: 'Mastering Physical AI and Humanoid Robotics',
   favicon: 'img/favicon.ico',
 
@@ -15,10 +15,10 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Fatimahakeem.github.io',
+  url: 'https://hakathone-physical-ai-book.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/hakathone-physical-ai-book/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -61,7 +61,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Physical AI Book',
+      title: 'Physical AI & Humanoid Robotics',
       logo: {
         alt: 'Physical AI Book Logo',
         src: 'img/robot-logo.svg',
